@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/csv-maker-9000/static/css/main.24504a63.css",
+    "main.js": "/csv-maker-9000/static/js/main.fe5b58d1.js",
+    "static/js/453.ed3810f9.chunk.js": "/csv-maker-9000/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/csv-maker-9000/index.html",
+    "main.24504a63.css.map": "/csv-maker-9000/static/css/main.24504a63.css.map",
+    "main.fe5b58d1.js.map": "/csv-maker-9000/static/js/main.fe5b58d1.js.map",
+    "453.ed3810f9.chunk.js.map": "/csv-maker-9000/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24504a63.css",
+    "static/js/main.fe5b58d1.js"
+  ]
+}
