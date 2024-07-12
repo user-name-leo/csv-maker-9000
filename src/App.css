@@ -1,38 +1,74 @@
-.App {
+
+.page-wrapper{
+  background-color: #1dcbde;
+  align-items: center;
+  font-family: Verdana;
+  font-size: medium;
+  color: rgb(255, 255, 255);
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-option {
+  display: flex;
+  column-gap: 20px;
+  width: 600px;
+  flex-wrap: nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#header-option-select { 
+  display: flex;
+  height: 24px;
+  flex-grow: 2;
+}
+#header-option-add {
+  height: 24px;
+  width: 176px;
+  flex-grow: 0;
+}
+
+.selected-headers-list {
+  padding-top: 10px;
+  color: rgb(114, 18, 225);
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
+  justify-content: space-between;
+  width: 600px;
+}
+
+#selected-column-header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+#column-header {
+  flex-grow: 4;
+}
+#header-option-remove {
+  height: 24px;
+  width: 176px;
+  flex-grow: 0;
+}
+.length-input {
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
+#csv-label {
+  padding-right: 40px;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+#input-label {
+margin-left: 8px;
+}
+
+.toggle {
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
