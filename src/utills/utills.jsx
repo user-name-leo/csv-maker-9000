@@ -47,20 +47,22 @@ const download = (data) => {
     const rowData = () =>  columnHeaders.map((columnHeader) => getRowData(columnHeader));
     let csvData = [];
     if(toggle===false) { 
-        csvData = new Array(Number(targetLength)).fill(rowData()).join('\n'); 
+        csvData = new Array(Number(targetLength)).fill(rowData()).join('\n'); // if the toggle is false we only call getRowData once
 
     } else {
         csvData = new Array(Number(targetLength)).fill([]).map(() => rowData()).join('\n'); // ensuring unique data by calling the function once per target length
     }
     return csvData 
   }
+
+  const numberWithCommas = (num) =>  num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
   export const get = async (rowHeaders, targetLength, toggle) => {
-      const csvData = () => getData(rowHeaders, targetLength, toggle); //  calling the get data function and providing target parameters 
-        const startTime = performance.now();
+  const csvData = () => getData(rowHeaders, targetLength, toggle); //  calling the get data function and providing target parameters 
+        const startTime = performance.now(); // mark the start time before creating the mock data
         const res = [rowHeaders, csvData()].join('\n');
-        const endTime = performance.now();
+        const endTime = performance.now(); // mark the end time after creating the mock data
         const message = toggle ? 'unique' : 'identical';
-        console.log(`Call to create ${targetLength} * rows of ${message} data took ${endTime - startTime} milliseconds`); // measuring how long it takes to create data 
+        console.log(`Call to create ${targetLength} * rows of ${message} data took ${numberWithCommas(endTime - startTime)} milliseconds`); // measuring how long it takes to create data 
     download(res); // calling the download function 
   }
-  const numberWithCommas = (num) =>  num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
